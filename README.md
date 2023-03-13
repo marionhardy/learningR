@@ -38,19 +38,21 @@ Caveats: Not enough time to make people truly familiar with R and be able to wri
 - Violinplot and adding conditional highlights
 - Types of high level structures and their use
 
-### Ch07 DESeq2 (accompanied by the Ch08 powerpoint!)
-
-- DESeq2 object creation
-- Writing and using a loop function on a dataframe
-- Quality check metrics : size factors, dispersion estimation and pca
-
-### Ch08 RNAseq: processing and analysis pipeline
+### Ch07 RNAseq: processing and analysis pipeline
 
 Powerpoint presentation covering:
 - Data processing (FASTQ -> BAM -> counts) using trim_galore, RSubread and featureCounts
 - Data analysis for differential expression using DESeq2 (+ which package to choose and a statistics reminder)
 - ORA vs GSEA
 - Querying MSidDb for enrichment analyses
+
+### Ch08 DESeq2 (accompanied by the Ch07 powerpoint!)
+
+- DESeq2 object creation
+- Writing and using a loop function on a dataframe
+- Quality check metrics : size factors, dispersion estimation and pca
+- Enrichment analyses
+
 
 ### Ch09 RNAseq: from Gene Expression Omnibus to a volcano plot
 
