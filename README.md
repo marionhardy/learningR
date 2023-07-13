@@ -20,7 +20,7 @@ Caveats: Not enough time to make people truly familiar with R and be able to wri
 ### Ch03 Data manipulation
 
 - Modifying data structures
-- Introduction to the tidyverse package: usinf filter(), mutate(), group_by() and summarize()
+- Introduction to the tidyverse package: using filter(), mutate(), group_by() and summarize()
 - Practice
 
 ### Ch04 Data manipulation pt 2
@@ -56,7 +56,7 @@ Powerpoint presentation covering:
 
 ### Ch09 RNAseq: from Gene Expression Omnibus to a volcano plot
 
-- Practice what was learned in ch07+08 on data from Gene Expression Omnibus (+ how to dowNload it)
+- Practice what was learned in ch07+08 on data from Gene Expression Omnibus (+ how to download it)
 - Questions are in the "Learning RNAseq" document
 
 NB: As of 12/12/22, the article from which originated the data is up for review so the data is not available through GEO. To receive the dataset used for the practice, contact me. (the article is planned to be published on 12/12/23).
