@@ -248,50 +248,6 @@ surveys %>%
 surveys %>% 
   count(species, year)
 
-## Exercise
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
