@@ -7,36 +7,36 @@
 
 ## Create a project: here -> LearningR.proj
 
-getwd()
+getwd() # tells you which folder R can see and search from, shoudl be LearningR
 
 # Create the generally useful subfolders: data, figures
 # Learn to comment your code using the pound (#) sign, it's useful and a must
 # for reproducibility
 
-### Start creating objects and using the console or/and a script
+### Start creating objects and using the console and/or a script
 
 # You can get output from R by simply doing math:
 
-5+78
+5+78 # execute this either here by using ctrl+enter or in the console by using enter
 198/3
 
-#You can also store this data, which will be useful for the future
+# You can also store this data, which will be useful for the future
 
-target_gene <- 6 # you are assigning the value 6 to the variable named gene_nbre
+target_gene <- 6 # you are assigning the value 6 to the variable named target_gene
 # or you can also use
-gene_all = 8 # but it might not work in all context so, please favor using ->
+gene_all = 8 # = is common to multiple languages whereas <- (alt+dash) is only in R
 
 # Choose short variable names that do not start with numbers
 # R is case-sensitive so Gene_name and gene_name are considered different
 # avoid using dots in the name (data.set > dataset)
 
-# When assigning a value to a variable, R stores it but does not print anything
-# either use 
+# When assigning a value to a variable, R stores it but does not print the value itself
+# to see what is inside your value, either use 
 print(gene_all)
 # or
 gene_all
 
-# You can now play with your variable
+# You can now play with your variable 
 
 (target_gene/gene_all)*100
 
@@ -64,7 +64,7 @@ gene_names <- c(PRKAA1,MTOR,ULK1,SLC1A4)
 
 #####################################
 
-class(gene_names) # ton inspect the class of elements
+class(gene_names) # to inspect the class of elements
 
 # So what happens if you mix them?
 x <- c("FR", 10, "BE")
@@ -107,7 +107,6 @@ x <- c(x,"This","Is","Longer")
 
 sort(x)
 
-
 ## The list (not Schindler's)
 
 # Behave like containers. Unlike vectors, they can contain
@@ -121,7 +120,7 @@ class(x[[2]])
 
 ## The matrix : Reloaded
 
-# Matrixes are an extension of vectors. They are vectors with dimensions.
+# Matrices are an extension of vectors. They are vectors with dimensions.
 # Meaning that they only tolerate one data type at the same time
 # You can check their dimensions by using dim()
 
@@ -137,7 +136,7 @@ x <- c(1,2)
 y <- c(3,4)
 z <- c(5,6)
 m1 <- cbind(x,y,z)
-?cbind
+?cbind # if you don't know what a function does, this is how you access its documentation
 
 # or
 
@@ -164,7 +163,7 @@ length(x)==length(y)
 
 # To access the first row of the matrix
 
-m[1] # will not work
+m[1] # will not work, is accessing the 1,1 of the matrix
 m[1,]
 
 # To access the first column of the matrix
@@ -184,14 +183,14 @@ m[2,3]
 # rownames(), colnames()
 
 # They are often imported into R by using read.csv() or read.tsv() or read.table()
-# Or even... from excel tables. But we will talk about this in two weeks.
+# Or even... from excel tables. But we will talk about this in the following classes.
 
 # To create a dataframe in R:
 
 set.seed(2)
 data <- data.frame(ID = 2355:2361,
                    name = c("PRKAA1", "CFTR", "EGFR","MYC","RAS","P53","CD14"),
-                   expr = round(runif(7,0,1), 2))
+                   expr = round(runif(7,0,1), 2)) # 7 numbers between 0 and 1
 
 data
 
@@ -205,42 +204,27 @@ sort(data)
 data[,data$expr>0.5]
 
 # These operations are made possible and easier by the tidyverse and dplyr
-# packages, one of the biggest strengths of R -> Next week
+# packages, one of the biggest strengths of R -> Next class
 
 
 ## Additional exercises
 
 # Create a vector of 7 random pvalues between 0.0001 and 0.01 and add it to the "data" dataframe
 # hint: create a vector and fill it with the runif() function
-pval <- c(0.5 etc)
-cbind()
+pval <- runif(7,10^-4, 10^-2)
+cbind(data, pval)
 
-# If not already done, call the column you added "pvalue"
-
-# Change the rownames of the "data" dataframe to the IDs of the genes
+# If not already done, 
+# call the column you added "pvalue"
+# and change the rownames of the "data" dataframe to the IDs of the genes
+# remove the ID column
 
 rownames(data) <- data$ID
 data
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+data_f = data[,-1]
+# or 
+data[,-which(colnames(data) == "ID")]
 
 
 
